@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ku">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Chess AI Kurd - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="container">
+        <div class="auth-card">
+            <div class="logo">
+                <img src="photo_2025-04-27_01-13-24.jpg" alt="Chess AI Kurd Logo">
+                <h1>Chess AI Kurd</h1>
+            </div>
+
+            <div id="alertBox" class="alert"></div>
+
+            <!-- Login Form -->
+            <div id="loginView" class="auth-view active">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label class="form-label">ئیمەیل</label>
+                        <input type="email" class="form-input" id="loginEmail" placeholder="example@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">وشەی نهێنی</label>
+                        <input type="password" class="form-input" id="loginPassword" placeholder="●●●●●●●●●" required>
+                    </div>
+                    <button type="submit" class="auth-btn btn-primary">
+                        <i class="fas fa-sign-in-alt"></i> چوونە ژوورەوە
+                    </button>
+                </form>
+
+
+
+                <div class="auth-links">
+                    <a href="#" class="auth-link" id="showSignupLink">دروستکردنی هەژماری نوێ</a>
+                    <a href="#" class="auth-link" id="showForgotPassLink">وشەی نهێنیم لەبیرکردووە</a>
+                </div>
+            </div>
+
+            <!-- Signup Form -->
+            <div id="signupView" class="auth-view">
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label class="form-label">ناو</label>
+                        <input type="text" class="form-input" id="signupName" placeholder="ناوی خۆت" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">ئیمەیل</label>
+                        <input type="email" class="form-input" id="signupEmail" placeholder="example@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">وشەی نهێنی</label>
+                        <input type="password" class="form-input" id="signupPassword" placeholder="●●●●●●●●●" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">دووبارەکردنەوەی وشەی نهێنی</label>
+                        <input type="password" class="form-input" id="signupConfirmPassword" placeholder="●●●●●●●●●" required>
+                    </div>
+                    <button type="submit" class="auth-btn btn-primary">
+                        <i class="fas fa-user-plus"></i> دروستکردنی هەژمار
+                    </button>
+                </form>
+
+                <div class="auth-links">
+                    <a href="#" class="auth-link" id="showLoginFromSignup">گەڕانەوە بۆ چوونە ژوورەوە</a>
+                </div>
+            </div>
+
+            <!-- Forgot Password Form -->
+            <div id="forgotPassView" class="auth-view">
+                <form id="forgotPassForm">
+                    <div class="form-group">
+                        <label class="form-label">ئیمەیل</label>
+                        <input type="email" class="form-input" id="forgotPassEmail" placeholder="example@email.com" required>
+                    </div>
+                    <button type="submit" class="auth-btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> ناردنی لینکی نوێکردنەوە
+                    </button>
+                </form>
+
+                <div class="auth-links">
+                    <a href="#" class="auth-link" id="showLoginFromForgot">گەڕانەوە بۆ چوونە ژوورەوە</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.0/firebase-auth-compat.js"></script>
+    <script src="chess_AI.js"></script>
+
+</body>
+</html>
